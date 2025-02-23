@@ -6,7 +6,7 @@ import base64
 from PIL import Image
 from io import BytesIO
 
-from bot.options import API_KEY, SECRET_KEY
+from options import API_KEY, SECRET_KEY
 
 
 class Text2ImageAPI:

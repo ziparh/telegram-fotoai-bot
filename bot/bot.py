@@ -1,7 +1,7 @@
 import telebot
 
-from bot.options import BOT_TOKEN
-from bot.logik import api
+from options import BOT_TOKEN
+from logik import api
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
