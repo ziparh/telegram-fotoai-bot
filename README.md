@@ -26,7 +26,8 @@ This is a Telegram bot that generates images based on user prompts using the `/i
 ## Running the Bot
 
 ```sh
-python bot.py
+cd bot
+python main.py
 ```
 
 ## Usage
