@@ -8,7 +8,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, "Hello! Write /img and your promt")
+    bot.send_message(message.chat.id, "Hello! Write /img <your pormt>")
 
 
 @bot.message_handler(commands=['img'])
@@ -16,7 +16,9 @@ def send_image(message):
     promt = message.text.replace("/img", "").strip()
 
     if not promt:
-        bot.send_message(message.chat.id, "Write /img and your promt (for example: /img cat)")
+        bot.send_message(message.chat.id, "Write /img <your pormt> (for example: /img cat)")
+
+    bot.send_message(message.chat.id, "Wait a few seconds for the photo to be generated...")
 
     model_id = api.get_model()
     uuid = api.generate(promt, model_id)
