@@ -55,18 +55,14 @@ class Text2ImageAPI:
     def save_image(self, uuid, file_path):
         images = api.check_generation(uuid)[0]
 
-        # Строка Base64, представляющая изображение
-        base64_string = images  # здесь должна быть ваша строка Base64
+        base64_string = images
 
-        # Декодируем строку Base64 в бинарные данные
         decoded_data = base64.b64decode(base64_string)
 
-        # Создаем объект изображения с помощью PIL
         image = Image.open(BytesIO(decoded_data))
 
-        # Отображаем изображение (опционально)
         image.show()
-        image.save(file_path)  # сохранение изображения на диск
+        image.save(file_path)
         print(f'Картинка сохранена:{file_path}')
 
 
