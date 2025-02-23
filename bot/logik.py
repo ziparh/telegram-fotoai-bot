@@ -63,7 +63,7 @@ class Text2ImageAPI:
 
         image.show()
         image.save(file_path)
-        print(f'Картинка сохранена:{file_path}')
+        print(f'Картинка сохранена: {file_path}')
 
 
 api = Text2ImageAPI('https://api-key.fusionbrain.ai/', API_KEY, SECRET_KEY)
